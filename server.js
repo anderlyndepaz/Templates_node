@@ -37,7 +37,10 @@ app.use('/contact', contactRoutes);
 // app.get('/home', (req, res) => {
 //     res.render('home'); // Renderiza la plantilla 'home.pug' desde la carpeta 'views'
 // });
-
+//para redirigir a home
+app.get('/', (req, res) => {
+  res.redirect('/home');
+});
 
 // // http://localhost:3000/first_template
 // app.get('/first_template', function(req, res){
