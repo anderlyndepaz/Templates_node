@@ -33,10 +33,10 @@ app.use('/contact', contactRoutes);
 
 
 
-//GET http://localhost:3000/
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
+// //GET http://localhost:3000/
+// app.get('/', (req, res) => {
+//     res.send('Hello World!');
+// });
 
 // // http://localhost:3000/first_template
 // app.get('/first_template', function(req, res){
