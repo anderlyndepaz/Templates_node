@@ -3,6 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const path = require('path');
+require('dotenv').config();
 
 app.use(express.json()); // Middleware para parsear el body de las peticiones
 app.use(express.static('public')); // Middleware para servir archivos estáticos de front. CSS,JS,Assets
