@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title Hello Pug
+    link(rel="stylesheet", href="/css/style.css")
+    script(src="/js/script.js")
+  body
+    p.greetings#people HOLA GENTE. BIENVENIDOS
+    h1 SOMOS UNOS LINDOS PUGS
+    
+    nav
+      button(onclick="navigateTo('/home')") Home
+      button(onclick="navigateTo('/about')") About
+      button(onclick="navigateTo('/contact')") Contact
+      button(onclick="navigateTo('/location')") Location
+      button(onclick="navigateTo('/mission')") Mission
+
+      img(src="/img/pug.jpg", alt="perro", width="600")
