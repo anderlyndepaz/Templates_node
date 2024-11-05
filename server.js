@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 const path = require('path');
 require('dotenv').config();
@@ -56,6 +55,6 @@ app.use((req, res, next) => {
 
 // app.use("*", manage404);
 
-app.listen(PORT, () => {
-  console.log(`Example app listening on http://localhost:${PORT}`);
-});
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!')
+})
