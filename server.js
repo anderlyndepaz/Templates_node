@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const path = require('path');
 
@@ -35,8 +35,9 @@ app.use('/contact', contactRoutes);
 
 // //GET http://localhost:3000/
 app.get('/home', (req, res) => {
-    res.send('home.pug');
+    res.render('home'); // Renderiza la plantilla 'home.pug' desde la carpeta 'views'
 });
+
 
 // // http://localhost:3000/first_template
 // app.get('/first_template', function(req, res){
