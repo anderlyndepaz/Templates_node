@@ -18,7 +18,7 @@ const locationRoutes = require("./routes/location.routes")
 const missionRoutes = require("./routes/mission.routes")
 const contactRoutes = require("./routes/contact.routes")
 
-
+// GET http://localhost:3000/home
 
 app.use('/home', homeRoutes);
 
@@ -34,9 +34,9 @@ app.use('/contact', contactRoutes);
 
 
 // //GET http://localhost:3000/
-// app.get('/', (req, res) => {
-//     res.send('Hello World!');
-// });
+app.get('/home', (req, res) => {
+    res.send('home.pug');
+});
 
 // // http://localhost:3000/first_template
 // app.get('/first_template', function(req, res){
