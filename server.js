@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 const path = require('path');
 
@@ -14,9 +14,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const homeRoutes = require("./routes/home.routes.js")
 const aboutRoutes = require("./routes/about.routes.js")
-const locationRoutes = require("./routes/location.routes")
-const missionRoutes = require("./routes/mission.routes")
-const contactRoutes = require("./routes/contact.routes")
+const locationRoutes = require("./routes/location.routes.js")
+const missionRoutes = require("./routes/mission.routes.js")
+const contactRoutes = require("./routes/contact.routes.js")
 
 // GET http://localhost:3000/home
 
@@ -48,6 +48,6 @@ app.get('/home', (req, res) => {
 
 // app.use("*", manage404);
 
-app.listen(port, () => {
-  console.log(`Example app listening on http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Example app listening on http://localhost:${PORT}`);
 });
