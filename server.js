@@ -33,10 +33,10 @@ app.use('/contact', contactRoutes);
 
 
 
-// //GET http://localhost:3000/
-app.get('/home', (req, res) => {
-    res.render('home'); // Renderiza la plantilla 'home.pug' desde la carpeta 'views'
-});
+// // //GET http://localhost:3000/
+// app.get('/home', (req, res) => {
+//     res.render('home'); // Renderiza la plantilla 'home.pug' desde la carpeta 'views'
+// });
 
 
 // // http://localhost:3000/first_template
@@ -44,6 +44,13 @@ app.get('/home', (req, res) => {
 //     res.render('first_view.pug');
 //   });
 
+app.use((req, res, next) => {
+  res.setHeader(
+      "Content-Security-Policy",
+      "default-src *; img-src * data:; script-src * 'unsafe-inline'; style-src * 'unsafe-inline';"
+  );
+  next();
+});
 
 
 // app.use("*", manage404);
