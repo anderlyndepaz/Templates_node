@@ -47,13 +47,13 @@ app.get('/', (req, res) => {
 //     res.render('first_view.pug');
 //   });
 
-app.use((req, res, next) => {
-  res.setHeader(
-      "Content-Security-Policy",
-      "default-src *; img-src * data:; script-src * 'unsafe-inline'; style-src * 'unsafe-inline';"
-  );
-  next();
-});
+// app.use((req, res, next) => {
+//   res.setHeader(
+//       "Content-Security-Policy",
+//       "default-src *; img-src * data:; script-src * 'unsafe-inline'; style-src * 'unsafe-inline';"
+//   );
+//   next();
+// });
 
 
 // app.use("*", manage404);
